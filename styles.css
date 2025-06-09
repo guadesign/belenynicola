@@ -1,0 +1,253 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfaf6;
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0;
+}
+
+/* --- EFECTO PARALLAX Y HERO --- */
+.hero-parallax {
+    /* Cambiado como pediste */
+    background-image: url('fondo.png');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.hero-parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-parallax > * {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* --- TEXTOS --- */
+header {
+    margin-bottom: 20px;
+}
+
+header h1, header h2, header p {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #bca07e;
+    font-size: 2rem;
+}
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: none;
+}
+
+/* --- BOTONES Y OTROS ELEMENTOS --- */
+button {
+    background-color: #bca07e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #a78d69;
+    transform: scale(1.05);
+}
+
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+}
+
+#btn-musica {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* --- COUNTDOWN --- */
+#countdown {
+    background: none;
+    box-shadow: none;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#countdown div {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #4a4a4a;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+#countdown div:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+#countdown span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#countdown small {
+    font-size: 1rem;
+}
+
+/* --- ANIMACIONES --- */
+.titulo-animado,
+.animar-al-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animar-al-scroll {
+    transform: translateY(40px);
+}
+
+.titulo-animado.visible,
+.animar-al-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =================================================================== */
+/* ESTILOS RESPONSIVE                                                  */
+/* =================================================================== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3.5rem; 
+        line-height: 1.1;
+    }
+
+    #countdown {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    #countdown div {
+        width: 90px;
+        padding: 10px;
+    }
+
+    #countdown span {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-bottom: 80px; /* Añadimos espacio abajo para que el botón no tape nada */
+    }
+
+    .hero-parallax {
+        min-height: 85vh;
+        height: auto;
+    }
+    
+    .language-selector {
+        position: static;
+        padding-top: 15px;
+    }
+
+    header {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    #countdown {
+        max-width: 320px;
+        gap: 10px;
+    }
+
+    #countdown div {
+        width: calc(50% - 30px);
+    }
+
+    /* --- CORRECCIÓN BOTÓN DE MÚSICA EN MÓVILES --- */
+    #btn-musica {
+        right: auto; /* Anulamos el 'right' original */
+        left: 50%; /* Lo movemos al 50% de la pantalla */
+        transform: translateX(-50%); /* Lo centramos perfectamente con este truco */
+        width: 90%;
+        max-width: 280px;
+    }
+
+    section {
+        margin: 0;
+        border-radius: 0;
+        padding: 30px 15px;
+        border-bottom: 1px solid #eee;
+    }
+}

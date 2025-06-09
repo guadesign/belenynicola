@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belén & Nicola - ¡Nos casamos!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="hero-parallax">
+        <div class="language-selector">
+            <button id="btn-es">Español</button>
+            <button id="btn-it">Italiano</button>
+        </div>
+
+        <header id="header-es">
+            <h1 class="titulo-animado">María Belén<br>&amp;<br>Nicola Maio</h1>
+            <h2 class="titulo-animado">¡Nos casamos!</h2>
+            <p class="titulo-animado">26 de Septiembre, 2025</p>
+        </header>
+        <header id="header-it" style="display: none;">
+            <h1 class="titulo-animado">María Belén<br>&amp;<br>Nicola Maio</h1>
+            <h2 class="titulo-animado">Ci sposiamo!</h2>
+            <p class="titulo-animado">26 Settembre 2025</p>
+        </header>
+
+        <section id="countdown" class="animar-al-scroll">
+            <div><span id="dias">00</span><small>Días</small></div>
+            <div><span id="horas">00</span><small>Horas</small></div>
+            <div><span id="minutos">00</span><small>Minutos</small></div>
+            <div><span id="segundos">00</span><small>Segundos</small></div>
+        </section>
+    </div>
+
+    <div id="content-es">
+        <section id="ubicacion-es" class="animar-al-scroll">
+            <h3>¿Dónde?</h3>
+            <p>La ceremonia y la fiesta serán en [Nombre del Lugar].</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194.3844039978615!2d16.20292425786445!3d38.783184896934564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13155ef54a6b8005%3A0x97fd2bafd200a974!2sREfresh%20Pizzo%20Ristorante%20Di%20Pesce%20Fresco%20Sala%20Ricevimenti%20In%20Riva%20Al%20Mare%20E%20Servizio%20Catering!5e0!3m2!1ses-419!2sar!4v1749238056845!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section id="asistencia-es" class="animar-al-scroll">
+            <h3>Confirmar Asistencia</h3>
+            <p>Por favor, confirma tu asistencia antes del 30 de Agosto.</p>
+            <iframe src="URL_DE_TU_FORMULARIO_DE_GOOGLE_EN_ESPAÑOL" width="640" height="800" frameborder="0">Cargando…</iframe>
+        </section>
+    </div>
+
+    <div id="content-it" style="display: none;">
+        <section id="ubicacion-it" class="animar-al-scroll">
+            <h3>Dove?</h3>
+            <p>La cerimonia e la festa si terranno presso [Nome del Luogo].</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194.3844039978615!2d16.20292425786445!3d38.783184896934564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13155ef54a6b8005%3A0x97fd2bafd200a974!2sREfresh%20Pizzo%20Ristorante%20Di%20Pesce%20Fresco%20Sala%20Ricevimenti%20In%20Riva%20Al%20Mare%20E%20Servizio%20Catering!5e0!3m2!1ses-419!2sar!4v1749238056845!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section id="asistencia-it" class="animar-al-scroll">
+            <h3>Conferma Presenza</h3>
+            <p>Per favore, conferma la tua presenza entro il 30 Agosto.</p>
+            <iframe src="URL_DE_TU_FORMULARIO_DE_GOOGLE_EN_ITALIANO" width="640" height="800" frameborder="0">Caricamento…</iframe>
+        </section>
+    </div>
+
+    <audio id="musica-fondo" src="Ed Sheeran - Thinking Out Loud (Official Music Video).mp3" loop></audio>
+    <button id="btn-musica">▶️ Tocar Música</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
