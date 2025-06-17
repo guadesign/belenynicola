@@ -22,7 +22,7 @@ body {
     text-align: center;
 }
 main {
-    padding-bottom: 120px;
+    padding-bottom: 80px;
 }
 h1, h2, h3 {
     font-family: var(--font-heading);
