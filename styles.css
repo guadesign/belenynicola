@@ -219,7 +219,7 @@ footer {
 /* === SECCIÓN RESPONSIVE === */
 @media (max-width: 768px) {
     .fixed-controls {
-        padding: 0.5rem;
+        padding: 0.5rem 0;
     }
     #audio-player {
         width: 100%;
