@@ -232,10 +232,23 @@ footer {
 }
 @media (max-width: 768px) {
     .fixed-controls {
-        padding: 0.5rem;
+        padding: 0.5rem 0;
     }
     #audio-player {
         width: 100%;
         max-width: 100%;
     }
+    .language-selector {
+        top: 15px;
+        right: 15px;
+        padding: 5px;
+        gap: 2px;
+    }
+    .language-selector button{
+    padding: 0.4rem 0.8rem;
+}
+.countdown-container {
+transform: scale(0.8);
+}
+
 }
