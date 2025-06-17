@@ -35,18 +35,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        const countdownHTML_ES = `
-            <div><div class="number">${days}</div><div class="label">Días</div></div>
-            <div><div class="number">${hours}</div><div class="label">Horas</div></div>
-            <div><div class="number">${minutes}</div><div class="label">Minutos</div></div>
-            <div><div class="number">${seconds}</div><div class="label">Segundos</div></div>
+const countdownHTML_ES = `
+            <div class="countdown-container">
+                <div class="time-unit"><div class="number">${days}</div><div class="label">días</div></div>
+                <div class="separator"></div>
+                <div class="time-unit"><div class="number">${hours}</div><div class="label">horas</div></div>
+                <div class="separator"></div>
+                <div class="time-unit"><div class="number">${minutes}</div><div class="label">min</div></div>
+                <div class="separator"></div>
+                <div class="time-unit"><div class="number">${seconds}</div><div class="label">seg</div></div>
+            </div>
         `;
 
         const countdownHTML_IT = `
-            <div><div class="number">${days}</div><div class="label">Giorni</div></div>
-            <div><div class="number">${hours}</div><div class="label">Ore</div></div>
-            <div><div class="number">${minutes}</div><div class="label">Minuti</div></div>
-            <div><div class="number">${seconds}</div><div class="label">Secondi</div></div>
+            <div class="countdown-container">
+                <div class="time-unit"><div class="number">${days}</div><div class="label">giorni</div></div>
+                <div class="separator"></div>
+                <div class="time-unit"><div class="number">${hours}</div><div class="label">ore</div></div>
+                <div class="separator"></div>
+                <div class="time-unit"><div class="number">${minutes}</div><div class="label">min</div></div>
+                <div class="separator"></div>
+                <div class="time-unit"><div class="number">${seconds}</div><div class="label">sec</div></div>
+            </div>
         `;
 
         const countdownEsDiv = document.getElementById('countdown-es');
