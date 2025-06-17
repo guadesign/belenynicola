@@ -247,6 +247,26 @@ footer {
     }
 }
 
+.fixed-controls .mejs__controls {
+    background: rgb(100 115 94);
+}
+
+.fixed-controls .mejs__time-total {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.fixed-controls .mejs__time-current {
+    background: var(--color-primary);
+}
+
+.fixed-controls .mejs__button > button {
+    color: white;
+}
+
+.fixed-controls .mejs__time {
+    color: white;
+    font-weight: bold;
+}
 @media (max-width: 480px) {
     h1 {
         font-size: 2.8rem;
