@@ -254,7 +254,31 @@ footer {
     /* --- Arreglo para el Contador --- */
     .countdown-container {
         /* Hacemos que el contador se achique para entrar en la pantalla */
-        transform: scale(0.8); 
+        transform: scale(0.7); 
         /* Si aún es muy grande, puedes probar con scale(0.7) o un valor menor */
     }
+/* === Punto de Quiebre ADICIONAL para Celulares Pequeños === */
+
+@media (max-width: 480px) {
+
+    /* Hacemos el contador AÚN más pequeño en teléfonos */
+    .countdown-container {
+        transform: scale(0.75); /* Reducimos la escala un poco más */
+    }
+
+    /* Ajustamos el botón de idioma para que no sea tan grande */
+    .language-selector {
+        transform: scale(0.85); /* Lo achicamos un poco más */
+        transform-origin: top right; /* Hacemos que se achique desde su esquina */
+    }
+
+    /* Ajustamos los títulos para que no ocupen tanto espacio */
+    h1 {
+        font-size: 2.8rem; /* Reducimos el tamaño del título principal */
+    }
+    .hero-text h2 {
+        font-size: 1.1rem; /* Reducimos el subtítulo */
+    }
+}
+
 }
