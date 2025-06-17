@@ -231,24 +231,30 @@ footer {
     transform: translateY(0);
 }
 @media (max-width: 768px) {
+    /* --- Arreglo para el Reproductor de Música --- */
     .fixed-controls {
-        padding: 0.5rem 0;
+        padding: 0.5rem 0; /* Mantenemos padding vertical, quitamos el horizontal */
     }
     #audio-player {
         width: 100%;
         max-width: 100%;
     }
+
+    /* --- Arreglo para el Botón de Idioma --- */
     .language-selector {
-        top: 15px;
-        right: 15px;
-        padding: 5px;
+        top: 15px;  /* Lo acercamos al borde superior */
+        right: 15px; /* Lo acercamos al borde derecho */
+        padding: 5px; /* Hacemos el contenedor un poco más pequeño */
         gap: 2px;
     }
-    .language-selector button{
-    padding: 0.4rem 0.8rem;
-}
-.countdown-container {
-transform: scale(0.8);
-}
+    .language-selector button {
+        padding: 0.4rem 0.8rem; /* Hacemos los botones un poco más pequeños */
+    }
 
+    /* --- Arreglo para el Contador --- */
+    .countdown-container {
+        /* Hacemos que el contador se achique para entrar en la pantalla */
+        transform: scale(0.8); 
+        /* Si aún es muy grande, puedes probar con scale(0.7) o un valor menor */
+    }
 }
