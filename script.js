@@ -1,107 +1,77 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- SELECCIÓN DE ELEMENTOS ---
+    const spanishContent = document.getElementById('spanish-content');
+    const italianContent = document.getElementById('italian-content');
     const btnEs = document.getElementById('btn-es');
     const btnIt = document.getElementById('btn-it');
-    const headerEs = document.getElementById('header-es');
-    const headerIt = document.getElementById('header-it');
-    const contentEs = document.getElementById('content-es');
-    const contentIt = document.getElementById('content-it');
-    const musica = document.getElementById('musica-fondo');
-    const btnMusica = document.getElementById('btn-musica');
-    const countdownLabels = {
-        dias: document.querySelector('#countdown div:nth-child(1) small'),
-        horas: document.querySelector('#countdown div:nth-child(2) small'),
-        minutos: document.querySelector('#countdown div:nth-child(3) small'),
-        segundos: document.querySelector('#countdown div:nth-child(4) small')
-    };
-    
-    // --- LÓGICA DE IDIOMAS ---
-    if (btnEs && btnIt && headerEs && headerIt && contentEs && contentIt) {
-        btnEs.addEventListener('click', () => {
-            headerEs.style.display = 'block';
-            headerIt.style.display = 'none';
-            contentEs.style.display = 'block';
-            contentIt.style.display = 'none';
 
-            countdownLabels.dias.textContent = 'Días';
-            countdownLabels.horas.textContent = 'Horas';
-            countdownLabels.minutos.textContent = 'Minutos';
-            countdownLabels.segundos.textContent = 'Segundos';
-            if (btnMusica) btnMusica.textContent = musica.paused ? '▶️ Tocar Música' : '⏸️ Pausar Música';
-        });
-
-        btnIt.addEventListener('click', () => {
-            headerEs.style.display = 'none';
-            headerIt.style.display = 'block';
-            contentEs.style.display = 'none';
-            contentIt.style.display = 'block';
-            
-            countdownLabels.dias.textContent = 'Giorni';
-            countdownLabels.horas.textContent = 'Ore';
-            countdownLabels.minutos.textContent = 'Minuti';
-            countdownLabels.segundos.textContent = 'Secondi';
-            if (btnMusica) btnMusica.textContent = musica.paused ? '▶️ Riproduci Musica' : '⏸️ Pausa la Musica';
-        });
+    function switchLanguage(lang) {
+        if (lang === 'es') {
+            spanishContent.style.display = 'block';
+            italianContent.style.display = 'none';
+            btnEs.classList.add('active');
+            btnIt.classList.remove('active');
+        } else {
+            spanishContent.style.display = 'none';
+            italianContent.style.display = 'block';
+            btnIt.classList.add('active');
+            btnEs.classList.remove('active');
+        }
     }
 
-    // --- LÓGICA DE MÚSICA ---
-    if (musica && btnMusica) {
-        let isPlaying = false;
-        musica.pause();
+    btnEs.addEventListener('click', () => switchLanguage('es'));
+    btnIt.addEventListener('click', () => switchLanguage('it'));
 
-        btnMusica.addEventListener('click', () => {
-            const isItalian = headerIt.style.display === 'block';
-            if (isPlaying) {
-                musica.pause();
-                btnMusica.textContent = isItalian ? '▶️ Riproduci Musica' : '▶️ Tocar Música';
-            } else {
-                musica.play();
-                btnMusica.textContent = isItalian ? '⏸️ Pausa la Musica' : '⏸️ Pausar Música';
-            }
-            isPlaying = !isPlaying;
-        });
-    }
+    switchLanguage('es');
 
-    // --- LÓGICA DEL COUNTDOWN ---
-    const fechaBoda = new Date('2025-09-26T18:00:00');
-    const diasEl = document.getElementById('dias');
-    const horasEl = document.getElementById('horas');
-    const minutosEl = document.getElementById('minutos');
-    const segundosEl = document.getElementById('segundos');
+    const weddingDate = new Date('2025-09-27T16:00:00');
 
-    function actualizarCountdown() {
-        const ahora = new Date();
-        const diferencia = fechaBoda - ahora;
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
 
-        if (diferencia < 0) {
-            clearInterval(intervalo);
-            document.getElementById('countdown').innerHTML = "<h2>¡Llegó el gran día!</h2>";
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const countdownHTML_ES = `
+            <div><div class="number">${days}</div><div class="label">Días</div></div>
+            <div><div class="number">${hours}</div><div class="label">Horas</div></div>
+            <div><div class="number">${minutes}</div><div class="label">Minutos</div></div>
+            <div><div class="number">${seconds}</div><div class="label">Segundos</div></div>
+        `;
+
+        const countdownHTML_IT = `
+            <div><div class="number">${days}</div><div class="label">Giorni</div></div>
+            <div><div class="number">${hours}</div><div class="label">Ore</div></div>
+            <div><div class="number">${minutes}</div><div class="label">Minuti</div></div>
+            <div><div class="number">${seconds}</div><div class="label">Secondi</div></div>
+        `;
+
+        const countdownEsDiv = document.getElementById('countdown-es');
+        const countdownItDiv = document.getElementById('countdown-it');
+
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            const finishedHTML = '<h2>¡Llegó el gran día!</h2>';
+            if (countdownEsDiv) countdownEsDiv.innerHTML = finishedHTML;
+            if (countdownItDiv) countdownItDiv.innerHTML = '<h2>È arrivato il grande giorno!</h2>';
             return;
         }
-        const d = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-        const h = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-        const s = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-        if(diasEl) diasEl.innerHTML = d < 10 ? '0' + d : d;
-        if(horasEl) horasEl.innerHTML = h < 10 ? '0' + h : h;
-        if(minutosEl) minutosEl.innerHTML = m < 10 ? '0' + m : m;
-        if(segundosEl) segundosEl.innerHTML = s < 10 ? '0' + s : s;
+        if (countdownEsDiv) countdownEsDiv.innerHTML = countdownHTML_ES;
+        if (countdownItDiv) countdownItDiv.innerHTML = countdownHTML_IT;
     }
 
-    if (diasEl) {
-        actualizarCountdown();
-        var intervalo = setInterval(actualizarCountdown, 1000);
-    }
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
 
-    // --- LÓGICA DE ANIMACIONES ---
-    const titulosAnimados = document.querySelectorAll('.titulo-animado');
-    setTimeout(() => {
-        titulosAnimados.forEach(titulo => titulo.classList.add('visible'));
-    }, 100);
+    new MediaElementPlayer('audio-player', {
+        stretching: 'responsive',
+        audioHeight: 40,
+    });
 
-    const elementosAnimables = document.querySelectorAll('.animar-al-scroll');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -109,7 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, {
+        threshold: 0.1
+    });
 
-    elementosAnimables.forEach(elemento => observer.observe(elemento));
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+
 });
