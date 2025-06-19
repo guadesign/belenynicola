@@ -85,6 +85,14 @@ section:nth-of-type(odd) {
     gap: 2rem;
     flex-wrap: wrap;
 }
+
+.mix-items-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
 .mix-item {
     font-size: 2rem;
 }
