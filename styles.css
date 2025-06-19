@@ -19,7 +19,7 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.7;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
 }
 main {
@@ -76,6 +76,8 @@ section:nth-of-type(odd) {
     align-items: center;
     gap: 2.5rem;
     text-align: left;
+    padding: 2rem 1.5rem;
+    justify-content: center;
 }
 .story-image {
     width: 300px;
@@ -84,9 +86,7 @@ section:nth-of-type(odd) {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-.story-text-content {
-    flex: 1;
-}
+
 .story-section .highlight {
     margin: 2rem 0;
 }
