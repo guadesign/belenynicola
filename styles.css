@@ -69,6 +69,27 @@ section:nth-of-type(odd) {
     font-weight: 400;
     letter-spacing: 2px;
 }
+
+.story-section {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: left;
+}
+.story-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.story-text-content {
+    flex: 1;
+}
+.story-section .highlight {
+    margin: 2rem 0;
+}
+
 .story-section .highlight {
     font-family: var(--font-heading);
     font-style: italic;
@@ -248,6 +269,10 @@ footer {
     .separator {
         height: 35px;
     }
+    .story-section {
+    flex-direction: column;
+    text-align: center;
+}
 }
 
 .fixed-controls .mejs__controls {
