@@ -80,10 +80,6 @@ section:nth-of-type(odd) {
     margin: 2rem auto;
 }
 .mix-section {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
 }
 
 .mix-items-container {
