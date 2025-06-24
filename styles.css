@@ -376,8 +376,7 @@ footer {
     backdrop-filter: blur(8px);
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
-    text-align: center;
-    padding: 0.5rem 0;
+    padding: 0; /* Quitar padding para que el player ocupe todo */
 }
 .language-selector {
     position: fixed;
@@ -405,13 +404,16 @@ footer {
     background: var(--color-primary);
     color: white;
 }
-#audio-player {
-    max-width: 250px;
-    vertical-align: middle;
-    display: inline-block;
+
+/* ESTILO DEL PLAYER AL 100% */
+#audio-player, .mejs__container {
+    width: 100% !important;
+    max-width: 100% !important;
 }
+
 .fixed-controls .mejs__controls {
     background: transparent;
+    padding: 0 10px;
 }
 .fixed-controls .mejs__time-total {
     background: rgba(4, 173, 191, 0.2);
