@@ -11,15 +11,6 @@ $(document).ready(function() {
             }
         });
 
-        const $musicPrompt = $('.music-prompt');
-        if ($musicPrompt.length) {
-            setTimeout(function() {
-                $musicPrompt.removeClass('animate__fadeIn').addClass('animate__fadeOut').on('animationend', function() {
-                    $(this).hide();
-                });
-            }, 4000);
-        }
-
         const eventDate = new Date('2025-09-27T16:00:00');
 
         function createCountdownHTML(days, hours, minutes, seconds, lang) {
@@ -71,16 +62,12 @@ $(document).ready(function() {
         const $btnIt = $('#btn-it');
         const $spanishContent = $('#spanish-content');
         const $italianContent = $('#italian-content');
-        const $musicPromptText = $('#music-prompt-text');
 
         function showSpanish() {
             $spanishContent.show();
             $italianContent.hide();
             $btnEs.addClass('active');
             $btnIt.removeClass('active');
-            if ($musicPromptText.length) {
-                $musicPromptText.text('¡Dale play a la música para una experiencia completa!');
-            }
         }
 
         function showItalian() {
@@ -88,9 +75,6 @@ $(document).ready(function() {
             $italianContent.show();
             $btnIt.addClass('active');
             $btnEs.removeClass('active');
-            if ($musicPromptText.length) {
-                $musicPromptText.text("Metti in play la musica per un'esperienza completa!");
-            }
         }
         
         $btnEs.on('click', showSpanish);
