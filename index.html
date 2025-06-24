@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belén & Nicola</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <svg id="wavy-svg" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,23.5V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
 
     <div id="spanish-content">
         <header class="hero-section">
@@ -19,39 +23,61 @@
                 <h1>Belén & Nicola</h1>
                 <h2>¡Nos casamos!</h2>
             </div>
+            <div class="wavy-divider">
+                <svg><use xlink:href="#wavy-svg"></use></svg>
+            </div>
         </header>
+        
         <main>
-<section class="story-section animate-on-scroll">
-    <img class="story-image" src="foti.jpg" alt="foto">
-    <div class="story-text-content">
-        <p>Todo empezó cuando Bel llegó desde Argentina a Italia, con su inconfundible acento tucumano, y Nicola la miró como diciendo: "¿Qué estará diciendo esta chica…?"</p>
-        <p class="highlight">Spoiler: no hablábamos el mismo idioma, pero Dios entendió perfectamente lo que estaba pasando… y nos unió.</p>
-        <p>Porque el idioma del amor es universal, no necesita traducción.</p>
-    </div>
-</section>
-            <section class="mix-section animate-on-scroll">
+            <section class="story-section animate-on-scroll">
+                <img class="story-image" src="foti.jpg" alt="foto de Belén y Nicola">
+                <div class="story-text-content">
+                    <p>Todo empezó cuando Bel llegó desde Argentina a Italia, con su inconfundible acento tucumano, y Nicola la miró como diciendo: "¿Qué estará diciendo esta chica…?"</p>
+                    <p class="highlight">Spoiler: no hablábamos el mismo idioma, pero Dios entendió perfectamente lo que estaba pasando… y nos unió.</p>
+                    <p>Porque el idioma del amor es universal, no necesita traducción.</p>
+                </div>
+                <div class="wavy-divider to-bg">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
+                </div>
+            </section>
+            
+            <section class="mix-section animate-on-scroll">
                 <p class="mix-intro">Después de muchas conversaciones en itañolo y espaliano, nuestra historia se volvió bilingüe, divertida y única con una mezcla hermosa, loca y divina:</p>
                 <div class="mix-items-container">
-                    <div class="mix-item">🧉+☕<p>Mate + espresso</p></div>
-                    <div class="mix-item">💃🕺<p>Cumbia + tarantella</p></div>
-                    <div class="mix-item">🥟+🍝<p>Empanadas + pasta al dente</p></div>
+                    <div class="mix-item">🧉+☕<p>Mate + espresso</p></div>
+                    <div class="mix-item">💃🕺<p>Cumbia + tarantella</p></div>
+                    <div class="mix-item">🥟+🍝<p>Empanadas + pasta al dente</p></div>
                 </div>
-            </section>
+                 <div class="wavy-divider">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
+                </div>
+            </section>
+            
             <section class="song-section animate-on-scroll">
                 <p>Y de fondo, una canción que nos representa: Supereroi.<br>Porque aunque la vida nos puso a prueba, aprendimos a levantarnos juntos, una y otra vez.</p>
             </section>
+            
             <section class="verse-section animate-on-scroll">
                 <blockquote>“En el amor no hay temor, sino que el perfecto amor echa fuera el temor.”</blockquote>
                 <cite>1 Juan 4:18</cite>
+                 <div class="wavy-divider to-bg">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
+                </div>
             </section>
+            
             <section class="invitation-details animate-on-scroll">
                 <h2>¿Cuándo y dónde?</h2>
                 <p>Y es en este amor que decidimos dar el “sí” frente a Dios. Y queremos que estés ahí.<br>¡Te invitamos a celebrar con nosotros esta hermosa unión de amor!</p>
+                
+                <div class="countdown-wrapper">
+                    <div id="countdown-es"></div>
+                </div>
+
                 <div class="details-container">
                     <div class="details-column">
                         <h3>⛪ ​La Misa</h3>
                         <p><strong>27 de Septiembre de 2025</strong><br>16:00 hs<br>📍 Chiesa di Maria SS. del Soccorso<br>Monterosso Calabro, Vibo Valentia</p>
-                        <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346.6679831384207!2d16.286953441738348!3d38.718425435276046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13155bbaa9128cad%3A0xe183b085069c22ac!2sChurch%20of%20Saint%20Mary%20of%20Prompt%20Succor!5e0!3m2!1ses!2sar!4v1750173472170!5m2!1ses!2sar"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346.6679831384207!2d16.286953441738348!3d38.718425435276046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13155bbaa9128cad%3A0xe183b085069c22ac!2sChurch%20of%20Saint%20Mary%20of%20Prompt%20Succor!5e0!3m2!1ses!2sar!4v1750173472170!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="details-column">
                         <h3>🥳​ ​La Fiesta</h3>
@@ -60,17 +86,22 @@
                     </div>
                 </div>
                 <div class="extra-info">
-                    <p>Una pequeña ceremonia especial, seguida del recibimiento y fiesta.<br>Habrá vista al mar, brindis, música y mucho, mucho baile.</p>
+                    <p>Una ceremonia especial, seguida del recibimiento y fiesta.<br>Habrá vista al mar, brindis, música y mucho, mucho baile.</p>
+                </div>
+                 <div class="wavy-divider to-bg">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
                 </div>
             </section>
-            <section class="countdown-section animate-on-scroll">
-                 <div id="countdown-es"></div>
-            </section>
-             <section class="rsvp-section animate-on-scroll">
+            
+            <section class="rsvp-section animate-on-scroll">
                 <h2>Confirmar Asistencia</h2>
                 <p>Nos encantaría que compartas con nosotros este día tan especial. Vení con el corazón abierto, con ganas de reír, emocionarte y disfrutar.</p>
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHtTXTPQE-zuNSr3VTjLGXYG3uATw9Ihdywpru0nUjZflqQw/viewform?embedded=true" width="100%" height="800" frameborder="0">Cargando…</iframe>
+                 <div class="wavy-divider to-footer">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
+                </div>
             </section>
+            
             <footer>
                 <p>¡Te esperamos con mucho amor!<br>— Belén & Nicola 💒✨</p>
             </footer>
@@ -78,44 +109,66 @@
     </div>
 
     <div id="italian-content" style="display:none;">
-         <header class="hero-section">
+        <header class="hero-section">
             <div class="hero-text">
                 <h1>Belén & Nicola</h1>
                 <h2>Ci sposiamo!</h2>
             </div>
+            <div class="wavy-divider">
+                <svg><use xlink:href="#wavy-svg"></use></svg>
+            </div>
         </header>
+        
         <main>
-<section class="story-section animate-on-scroll">
-    <img class="story-image" src="foti.jpg" alt="foto">
-    <div class="story-text-content">
-        <p>Tutto è cominciato quando Bel è arrivata dall’Argentina in Italia, con il suo inconfondibile accento di Tucumán, e Nicola l’ha guardata come per dire: "Ma… cosa starà dicendo questa ragazza?"</p>
-        <p class="highlight">Spoiler: non parlavamo la stessa lingua, ma Dio ha capito perfettamente cosa stava succedendo… e ci ha uniti.</p>
-        <p>Perché il linguaggio dell’amore è universale, non ha bisogno di traduzioni.</p>
-    </div>
-</section>
+            <section class="story-section animate-on-scroll">
+                <img class="story-image" src="foti.jpg" alt="foto di Belén e Nicola">
+                <div class="story-text-content">
+                    <p>Tutto è cominciato quando Bel è arrivata dall’Argentina in Italia, con il suo inconfondibile accento di Tucumán, e Nicola l’ha guardata come per dire: "Ma… cosa starà dicendo questa ragazza?"</p>
+                    <p class="highlight">Spoiler: non parlavamo la stessa lingua, ma Dio ha capito perfettamente cosa stava succedendo… e ci ha uniti.</p>
+                    <p>Perché il linguaggio dell’amore è universale, non ha bisogno di traduzioni.</p>
+                </div>
+                <div class="wavy-divider to-bg">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
+                </div>
+            </section>
+
             <section class="mix-section animate-on-scroll">
                 <p class="mix-intro">Dopo tante conversazioni in itagnolo e espaliano, la nostra storia è diventata bilingue, divertente e unica, con un mix meraviglioso, folle e divino:</p>
                 <div class="mix-items-container">
-                    <div class="mix-item">🧉+☕<p>Mate + espresso</p></div>
-                    <div class="mix-item">💃🕺<p>Cumbia + tarantella</p></div>
-                    <div class="mix-item">🥟+🍝<p>Empanadas + pasta al dente</p></div>
+                    <div class="mix-item">🧉+☕<p>Mate + espresso</p></div>
+                    <div class="mix-item">💃🕺<p>Cumbia + tarantella</p></div>
+                    <div class="mix-item">🥟+🍝<p>Empanadas + pasta al dente</p></div>
                 </div>
-            </section>
+                <div class="wavy-divider">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
+                </div>
+            </section>
+
             <section class="song-section animate-on-scroll">
                 <p>E in sottofondo, una canzone che ci rappresenta: Supereroi.<br>Perché anche se la vita ci ha messo alla prova, abbiamo imparato a rialzarci insieme, ancora e ancora.</p>
             </section>
+
             <section class="verse-section animate-on-scroll">
                 <blockquote>«Nell’amore non c’è paura; al contrario, l’amore perfetto scaccia la paura.»</blockquote>
                 <cite>1 Giovanni 4:18</cite>
+                <div class="wavy-divider to-bg">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
+                </div>
             </section>
+            
             <section class="invitation-details animate-on-scroll">
                 <h2>Quando e dove?</h2>
                 <p>Ed è in questo amore che abbiamo deciso di dire “sì” davanti a Dio. E vogliamo che tu sia lì con noi.<br>Ti invitiamo a celebrare con noi questa bellissima unione d’amore!</p>
+                
+                <div class="countdown-wrapper">
+                    <div id="countdown-it"></div>
+                </div>
+                
                 <div class="details-container">
                     <div class="details-column">
                         <h3>⛪​La Messa</h3>
                         <p><strong>27 Settembre 2025</strong><br>Ore 16:00<br>📍 Chiesa di Maria SS. del Soccorso<br>Monterosso Calabro, Vibo Valentia</p>
-                          <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346.6679831384207!2d16.286953441738348!3d38.718425435276046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13155bbaa9128cad%3A0xe183b085069c22ac!2sChurch%20of%20Saint%20Mary%20of%20Prompt%20Succor!5e0!3m2!1ses!2sar!4v1750173472170!5m2!1ses!2sar"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346.6679831384207!2d16.286953441738348!3d38.718425435276046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13155bbaa9128cad%3A0xe183b085069c22ac!2sChurch%20of%20Saint%20Mary%20of%20Prompt%20Succor!5e0!3m2!1ses!2sar!4v1750173472170!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="details-column">
                         <h3>🥳​ ​La Festa</h3>
@@ -123,18 +176,23 @@
                         <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.152031745682!2d16.2003375748107!3d38.78314895343901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13155ef54a6b8005%3A0x97fd2bafd200a974!2sREfresh%20Pizzo%20Ristorante%20Di%20Pesce%20Fresco%20Sala%20Ricevimenti%20In%20Riva%20Al%20Mare%20E%20Servizio%20Catering!5e0!3m2!1ses!2sar!4v1750170568058!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                 <div class="extra-info">
-                    <p>Una piccola ceremonia speciale, seguita dal ricevimento e festa.<br>Ci saranno vista mare, brindisi, musica e tanto, tanto ballo.</p>
+                <div class="extra-info">
+                    <p>Una ceremonia speciale, seguita dal ricevimento e festa.<br>Ci saranno vista mare, brindisi, musica e tanto, tanto ballo.</p>
+                </div>
+                <div class="wavy-divider to-bg">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
                 </div>
             </section>
-            <section class="countdown-section animate-on-scroll">
-                 <div id="countdown-it"></div>
-            </section>
-             <section class="rsvp-section animate-on-scroll">
+            
+            <section class="rsvp-section animate-on-scroll">
                 <h2>Conferma Presenza</h2>
-                 <p>Saremo felicissimi di condividere con te questo giorno così speciale. Vieni con il cuore aperto, con voglia di ridere, emozionarti e divertirti.</p>
+                <p>Saremo felicissimi di condividere con te questo giorno così speciale. Vieni con il cuore aperto, con voglia di ridere, emozionarti e divertirti.</p>
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfc4D7ncdlkEpXFrgPOVVZgGv3sHwBOaIG5XnHqV6dzEMZTjQ/viewform?embedded=true" width="100%" height="800" frameborder="0">Caricamento…</iframe>
+                <div class="wavy-divider to-footer">
+                    <svg><use xlink:href="#wavy-svg"></use></svg>
+                </div>
             </section>
+            
             <footer>
                 <p>Ti aspettiamo con tanto amore!<br>— Belén & Nicola 💒✨</p>
             </footer>
