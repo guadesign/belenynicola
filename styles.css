@@ -1,7 +1,6 @@
 :root {
     --font-heading: 'Playfair Display', serif;
     --font-body: 'EB Garamond', serif;
-
     --color-sky-blue: #CEDEF2;
     --color-sea-turquoise: #04ADBF;
     --color-sand-peach: #F2B999;
@@ -74,6 +73,65 @@ section {
     padding: 5rem 2rem;
     position: relative;
     background-color: var(--color-background);
+}
+
+.music-prompt {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(4, 173, 191, 0.9);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 1002;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-style: italic;
+}
+
+.music-prompt i {
+    font-size: 1rem;
+}
+
+.animate__animated {
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+.animate__fadeOut {
+    animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
 }
 
 .wavy-divider {
@@ -273,7 +331,6 @@ section {
     flex-direction: column;
     align-items: center;
 }
-.countdown-section .number,
 .countdown-container .number {
     font-family: var(--font-heading);
     font-size: 2.8rem;
@@ -281,7 +338,6 @@ section {
     color: var(--color-primary);
     line-height: 1;
 }
-.countdown-section .label,
 .countdown-container .label {
     font-size: 1rem;
     font-style: italic;
@@ -321,11 +377,12 @@ footer {
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
     text-align: center;
+    padding: 0.5rem 0;
 }
 .language-selector {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 25px;
+    right: 25px;
     z-index: 1001;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 6px;
@@ -351,6 +408,7 @@ footer {
 #audio-player {
     max-width: 250px;
     vertical-align: middle;
+    display: inline-block;
 }
 .fixed-controls .mejs__controls {
     background: transparent;
@@ -391,11 +449,9 @@ footer {
         padding: 1rem 1.5rem;
         gap: 1.2rem;
     }
-    .countdown-section .number,
     .countdown-container .number {
         font-size: 2.2rem;
     }
-    .countdown-section .label,
     .countdown-container .label {
         font-size: 0.8rem;
     }
@@ -415,15 +471,18 @@ footer {
         padding: 0.8rem 1rem;
         gap: 1rem;
     }
-    .countdown-section .number,
     .countdown-container .number {
         font-size: 1.8rem;
     }
-    .countdown-section .label,
     .countdown-container .label {
         font-size: 0.7rem;
     }
     .separator {
         height: 30px;
+    }
+    .music-prompt {
+        width: 90%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
     }
 }
